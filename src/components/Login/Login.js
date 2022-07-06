@@ -12,6 +12,14 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
   useEffect(() => {
+    console.log('Run 1');
+
+    return () => {
+      console.log('Run 2');
+    };
+  });
+
+  useEffect(() => {
     const idetifier = setTimeout(() => {
       console.log('Hello');
       setFormIsValid(
